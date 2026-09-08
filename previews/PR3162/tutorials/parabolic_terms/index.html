@@ -88,47 +88,47 @@
  ─────────────────────────────────────  ──────────────────────    ────────────────────────
  Section                        ncalls    time    %tot     avg      alloc    %tot      avg
 ───────────────────────────────────────────────────────────────────────────────────────────
- parabolic rhs!                  1.20k   222ms   75.4%   185μs    7.19KiB   64.0%    6.13B
- ├─ calculate gradient           1.20k   102ms   34.7%  85.0μs    2.62KiB   23.4%    2.24B
- │  ├─ volume integral           1.20k  64.5ms   21.9%  53.7μs          ∅       ∅        ∅
- │  ├─ surface integral          1.20k  10.4ms    3.5%  8.63μs          ∅       ∅        ∅
- │  ├─ Jacobian                  1.20k  8.93ms    3.0%  7.44μs          ∅       ∅        ∅
- │  ├─ prolong2interfaces        1.20k  7.24ms    2.5%  6.03μs          ∅       ∅        ∅
- │  ├─ interface flux            1.20k  6.40ms    2.2%  5.33μs          ∅       ∅        ∅
- │  ├─ reset gradients           1.20k  1.41ms    0.5%  1.17μs          ∅       ∅        ∅
- │  ├─ ~calculate gradient~      1.20k  1.29ms    0.4%  1.08μs    2.62KiB   23.4%    2.24B
- │  ├─ prolong2boundaries        1.20k   957μs    0.3%   798ns          ∅       ∅        ∅
- │  ├─ boundary flux             1.20k   787μs    0.3%   656ns          ∅       ∅        ∅
- │  ├─ prolong2mortars           1.20k  74.5μs    0.0%  62.1ns          ∅       ∅        ∅
- │  └─ mortar flux               1.20k  50.5μs    0.0%  42.1ns          ∅       ∅        ∅
- ├─ volume integral              1.20k  52.5ms   17.8%  43.8μs          ∅       ∅        ∅
- ├─ calculate parabolic fluxes   1.20k  38.4ms   13.0%  32.0μs          ∅       ∅        ∅
- ├─ prolong2interfaces           1.20k  7.58ms    2.6%  6.32μs          ∅       ∅        ∅
- ├─ transform variables          1.20k  6.55ms    2.2%  5.46μs          ∅       ∅        ∅
- ├─ interface flux               1.20k  6.41ms    2.2%  5.34μs          ∅       ∅        ∅
+ parabolic rhs!                  1.20k   222ms   75.5%   185μs    7.19KiB   64.0%    6.13B
+ ├─ calculate gradient           1.20k   105ms   35.7%  87.5μs    2.62KiB   23.4%    2.24B
+ │  ├─ volume integral           1.20k  66.5ms   22.6%  55.4μs          ∅       ∅        ∅
+ │  ├─ surface integral          1.20k  10.9ms    3.7%  9.10μs          ∅       ∅        ∅
+ │  ├─ Jacobian                  1.20k  9.07ms    3.1%  7.56μs          ∅       ∅        ∅
+ │  ├─ prolong2interfaces        1.20k  7.44ms    2.5%  6.20μs          ∅       ∅        ∅
+ │  ├─ interface flux            1.20k  6.50ms    2.2%  5.42μs          ∅       ∅        ∅
+ │  ├─ reset gradients           1.20k  1.58ms    0.5%  1.32μs          ∅       ∅        ∅
+ │  ├─ ~calculate gradient~      1.20k  1.18ms    0.4%   983ns    2.62KiB   23.4%    2.24B
+ │  ├─ prolong2boundaries        1.20k   990μs    0.3%   825ns          ∅       ∅        ∅
+ │  ├─ boundary flux             1.20k   801μs    0.3%   667ns          ∅       ∅        ∅
+ │  ├─ prolong2mortars           1.20k  61.2μs    0.0%  51.0ns          ∅       ∅        ∅
+ │  └─ mortar flux               1.20k  52.2μs    0.0%  43.5ns          ∅       ∅        ∅
+ ├─ volume integral              1.20k  50.3ms   17.1%  41.9μs          ∅       ∅        ∅
+ ├─ calculate parabolic fluxes   1.20k  38.5ms   13.1%  32.1μs          ∅       ∅        ∅
+ ├─ prolong2interfaces           1.20k  7.37ms    2.5%  6.15μs          ∅       ∅        ∅
+ ├─ transform variables          1.20k  6.57ms    2.2%  5.47μs          ∅       ∅        ∅
+ ├─ interface flux               1.20k  6.35ms    2.2%  5.29μs          ∅       ∅        ∅
+ ├─ surface integral             1.20k  3.22ms    1.1%  2.68μs          ∅       ∅        ∅
+ ├─ ~parabolic rhs!~             1.20k  1.69ms    0.6%  1.41μs    4.56KiB   40.6%    3.89B
+ ├─ boundary flux                1.20k   972μs    0.3%   810ns          ∅       ∅        ∅
+ ├─ prolong2boundaries           1.20k   769μs    0.3%   641ns          ∅       ∅        ∅
+ ├─ Jacobian                     1.20k   678μs    0.2%   565ns          ∅       ∅        ∅
+ ├─ reset ∂u/∂t                  1.20k   651μs    0.2%   542ns          ∅       ∅        ∅
+ ├─ mortar flux                  1.20k  55.4μs    0.0%  46.2ns          ∅       ∅        ∅
+ ├─ prolong2mortars              1.20k  54.4μs    0.0%  45.3ns          ∅       ∅        ∅
+ └─ source terms parabolic       1.20k  34.9μs    0.0%  29.1ns          ∅       ∅        ∅
+ rhs_hyperbolic!                 1.20k  72.2ms   24.5%  60.1μs    4.05KiB   36.0%    3.45B
+ ├─ volume integral              1.20k  47.3ms   16.1%  39.4μs          ∅       ∅        ∅
+ ├─ interface flux               1.20k  13.4ms    4.6%  11.2μs          ∅       ∅        ∅
+ ├─ prolong2interfaces           1.20k  3.40ms    1.2%  2.83μs          ∅       ∅        ∅
  ├─ surface integral             1.20k  3.30ms    1.1%  2.75μs          ∅       ∅        ∅
- ├─ ~parabolic rhs!~             1.20k  1.80ms    0.6%  1.50μs    4.56KiB   40.6%    3.89B
- ├─ boundary flux                1.20k  1.01ms    0.3%   839ns          ∅       ∅        ∅
- ├─ prolong2boundaries           1.20k   785μs    0.3%   654ns          ∅       ∅        ∅
- ├─ Jacobian                     1.20k   740μs    0.3%   616ns          ∅       ∅        ∅
- ├─ reset ∂u/∂t                  1.20k   566μs    0.2%   472ns          ∅       ∅        ∅
- ├─ prolong2mortars              1.20k  59.9μs    0.0%  49.9ns          ∅       ∅        ∅
- ├─ mortar flux                  1.20k  48.1μs    0.0%  40.1ns          ∅       ∅        ∅
- └─ source terms parabolic       1.20k  34.6μs    0.0%  28.8ns          ∅       ∅        ∅
- rhs_hyperbolic!                 1.20k  72.5ms   24.6%  60.4μs    4.05KiB   36.0%    3.45B
- ├─ volume integral              1.20k  47.4ms   16.1%  39.5μs          ∅       ∅        ∅
- ├─ interface flux               1.20k  13.5ms    4.6%  11.2μs          ∅       ∅        ∅
- ├─ prolong2interfaces           1.20k  3.41ms    1.2%  2.84μs          ∅       ∅        ∅
- ├─ surface integral             1.20k  3.29ms    1.1%  2.74μs          ∅       ∅        ∅
- ├─ boundary flux                1.20k  1.58ms    0.5%  1.32μs          ∅       ∅        ∅
- ├─ ~rhs_hyperbolic!~            1.20k  1.45ms    0.5%  1.21μs    4.05KiB   36.0%    3.45B
- ├─ Jacobian                     1.20k   666μs    0.2%   555ns          ∅       ∅        ∅
- ├─ reset ∂u/∂t                  1.20k   621μs    0.2%   518ns          ∅       ∅        ∅
- ├─ prolong2boundaries           1.20k   492μs    0.2%   410ns          ∅       ∅        ∅
- ├─ prolong2mortars              1.20k  67.5μs    0.0%  56.2ns          ∅       ∅        ∅
- ├─ mortar flux                  1.20k  48.8μs    0.0%  40.7ns          ∅       ∅        ∅
- └─ source terms                 1.20k  37.1μs    0.0%  30.9ns          ∅       ∅        ∅
-───────────────────────────────────────────────────────────────────────────────────────────</code></pre><p>We can now visualize the solution, which develops a boundary layer at the outflow boundaries.</p><pre id="c-90d24c06"><code class="nohighlight hljs line-numbers"><span class="code-lines"><span class="line"><span class="line-num" aria-hidden="true"></span><span class="julia-keyword">using</span> Plots</span><span class="line"><span class="line-num" aria-hidden="true"></span><span class="julia-funcall">plot</span>(sol)</span></span></code></pre><img src="a8c567cb.svg" alt="Example block output"/><h2 id="Package-versions"><a class="docs-heading-anchor" href="#Package-versions">Package versions</a><a id="Package-versions-1"></a><a class="docs-heading-anchor-permalink" href="#Package-versions" title="Permalink"></a></h2><p>These results were obtained using the following versions.</p><pre id="c-100d135b"><code class="nohighlight hljs line-numbers"><span class="code-lines"><span class="line"><span class="line-num" aria-hidden="true"></span><span class="julia-keyword">using</span> InteractiveUtils</span><span class="line"><span class="line-num" aria-hidden="true"></span><span class="julia-funcall">versioninfo</span>()</span><span class="line"><span class="line-num" aria-hidden="true"></span></span><span class="line"><span class="line-num" aria-hidden="true"></span><span class="julia-keyword">using</span> Pkg</span><span class="line"><span class="line-num" aria-hidden="true"></span>Pkg<span class="julia-operator">.</span><span class="julia-funcall">status</span>([<span class="julia-string">&quot;</span><span class="julia-string">Trixi</span><span class="julia-string">&quot;</span>, <span class="julia-string">&quot;</span><span class="julia-string">OrdinaryDiffEqLowStorageRK</span><span class="julia-string">&quot;</span>, <span class="julia-string">&quot;</span><span class="julia-string">Plots</span><span class="julia-string">&quot;</span>],</span><span class="line"><span class="line-num" aria-hidden="true"></span>           mode <span class="julia-keyword">=</span> PKGMODE_MANIFEST)</span></span></code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">Julia Version 1.10.12
+ ├─ boundary flux                1.20k  1.56ms    0.5%  1.30μs          ∅       ∅        ∅
+ ├─ ~rhs_hyperbolic!~            1.20k  1.28ms    0.4%  1.07μs    4.05KiB   36.0%    3.45B
+ ├─ reset ∂u/∂t                  1.20k   681μs    0.2%   567ns          ∅       ∅        ∅
+ ├─ Jacobian                     1.20k   665μs    0.2%   554ns          ∅       ∅        ∅
+ ├─ prolong2boundaries           1.20k   453μs    0.2%   378ns          ∅       ∅        ∅
+ ├─ prolong2mortars              1.20k  57.2μs    0.0%  47.7ns          ∅       ∅        ∅
+ ├─ mortar flux                  1.20k  45.7μs    0.0%  38.1ns          ∅       ∅        ∅
+ └─ source terms                 1.20k  34.8μs    0.0%  29.0ns          ∅       ∅        ∅
+───────────────────────────────────────────────────────────────────────────────────────────</code></pre><p>We can now visualize the solution, which develops a boundary layer at the outflow boundaries.</p><pre id="c-90d24c06"><code class="nohighlight hljs line-numbers"><span class="code-lines"><span class="line"><span class="line-num" aria-hidden="true"></span><span class="julia-keyword">using</span> Plots</span><span class="line"><span class="line-num" aria-hidden="true"></span><span class="julia-funcall">plot</span>(sol)</span></span></code></pre><img src="498b9dc1.svg" alt="Example block output"/><h2 id="Package-versions"><a class="docs-heading-anchor" href="#Package-versions">Package versions</a><a id="Package-versions-1"></a><a class="docs-heading-anchor-permalink" href="#Package-versions" title="Permalink"></a></h2><p>These results were obtained using the following versions.</p><pre id="c-100d135b"><code class="nohighlight hljs line-numbers"><span class="code-lines"><span class="line"><span class="line-num" aria-hidden="true"></span><span class="julia-keyword">using</span> InteractiveUtils</span><span class="line"><span class="line-num" aria-hidden="true"></span><span class="julia-funcall">versioninfo</span>()</span><span class="line"><span class="line-num" aria-hidden="true"></span></span><span class="line"><span class="line-num" aria-hidden="true"></span><span class="julia-keyword">using</span> Pkg</span><span class="line"><span class="line-num" aria-hidden="true"></span>Pkg<span class="julia-operator">.</span><span class="julia-funcall">status</span>([<span class="julia-string">&quot;</span><span class="julia-string">Trixi</span><span class="julia-string">&quot;</span>, <span class="julia-string">&quot;</span><span class="julia-string">OrdinaryDiffEqLowStorageRK</span><span class="julia-string">&quot;</span>, <span class="julia-string">&quot;</span><span class="julia-string">Plots</span><span class="julia-string">&quot;</span>],</span><span class="line"><span class="line-num" aria-hidden="true"></span>           mode <span class="julia-keyword">=</span> PKGMODE_MANIFEST)</span></span></code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">Julia Version 1.10.12
 Commit d93beab124c (2026-08-15 10:29 UTC)
 Build Info:
   Official https://julialang.org/ release
@@ -144,7 +144,7 @@ Environment:
 <span class="sgr32"><span class="sgr1">Status</span></span> `~/work/Trixi.jl/Trixi.jl/docs/Manifest.toml`
   <span class="sgr90">[b0944070] </span>OrdinaryDiffEqLowStorageRK v3.4.0
   <span class="sgr90">[91a5bcdd] </span>Plots v1.41.7
-  <span class="sgr90">[a7f1ee26] </span>Trixi v0.17.7-DEV `~/work/Trixi.jl/Trixi.jl`</code></pre><hr/><p><em>This page was generated using <a href="https://github.com/fredrikekre/Literate.jl">Literate.jl</a>.</em></p></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="../adding_nonconservative_equation/">« 12 Adding a non-conservative equation</a><a class="docs-footer-nextpage" href="../adding_new_parabolic_terms/">14 Adding new parabolic terms »</a><div class="flexbox-break"></div><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="auto">Automatic (OS)</option><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option><option value="catppuccin-latte">catppuccin-latte</option><option value="catppuccin-frappe">catppuccin-frappe</option><option value="catppuccin-macchiato">catppuccin-macchiato</option><option value="catppuccin-mocha">catppuccin-mocha</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> version 1.19.0 on <span class="colophon-date" title="Tuesday 8 September 2026 07:06">Tuesday 8 September 2026</span>. Using Julia version 1.10.12.</p></section><footer class="modal-card-foot"></footer></div></div></div><div class="ref-tips" hidden><div class="ref-tip" data-for="../../reference-trixi/#SummationByPartsOperators.semidiscretize-Tuple{SemidiscretizationHyperbolicParabolic, Any}"><code class="ref-tip-sig nohighlight"><span class="julia-funcall">semidiscretize</span>(semi<span class="julia-operator">::</span><span class="julia-type">SemidiscretizationHyperbolicParabolic</span>, tspan;
+  <span class="sgr90">[a7f1ee26] </span>Trixi v0.17.7-DEV `~/work/Trixi.jl/Trixi.jl`</code></pre><hr/><p><em>This page was generated using <a href="https://github.com/fredrikekre/Literate.jl">Literate.jl</a>.</em></p></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="../adding_nonconservative_equation/">« 12 Adding a non-conservative equation</a><a class="docs-footer-nextpage" href="../adding_new_parabolic_terms/">14 Adding new parabolic terms »</a><div class="flexbox-break"></div><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="auto">Automatic (OS)</option><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option><option value="catppuccin-latte">catppuccin-latte</option><option value="catppuccin-frappe">catppuccin-frappe</option><option value="catppuccin-macchiato">catppuccin-macchiato</option><option value="catppuccin-mocha">catppuccin-mocha</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> version 1.19.0 on <span class="colophon-date" title="Tuesday 8 September 2026 10:06">Tuesday 8 September 2026</span>. Using Julia version 1.10.12.</p></section><footer class="modal-card-foot"></footer></div></div></div><div class="ref-tips" hidden><div class="ref-tip" data-for="../../reference-trixi/#SummationByPartsOperators.semidiscretize-Tuple{SemidiscretizationHyperbolicParabolic, Any}"><code class="ref-tip-sig nohighlight"><span class="julia-funcall">semidiscretize</span>(semi<span class="julia-operator">::</span><span class="julia-type">SemidiscretizationHyperbolicParabolic</span>, tspan;
                jac_prototype_parabolic<span class="julia-operator">::</span><span class="julia-type">Union</span>{<span class="julia-type">AbstractMatrix</span>, <span class="julia-type">Nothing</span>} <span class="julia-keyword">=</span> <span class="julia-symbol">nothing</span>,
                colorvec_parabolic<span class="julia-operator">::</span><span class="julia-type">Union</span>{<span class="julia-type">AbstractVector</span>, <span class="julia-type">Nothing</span>} <span class="julia-keyword">=</span> <span class="julia-symbol">nothing</span>)</code><p class="ref-tip-brief">Wrap the semidiscretization semi as a split ODE problem in the time interval tspan that can be passed to solve from the SciML ecosystem.</p></div><div class="ref-tip" data-for="../../reference-trixi/#SummationByPartsOperators.semidiscretize-Tuple{SemidiscretizationHyperbolicSplit, Any}"><code class="ref-tip-sig nohighlight"><span class="julia-funcall">semidiscretize</span>(semi<span class="julia-operator">::</span><span class="julia-type">SemidiscretizationHyperbolicSplit</span>, tspan)</code><p class="ref-tip-brief">Wrap the semidiscretization semi as a split ODE problem in the time interval tspan that can be passed to solve from the SciML ecosystem.</p></div><div class="ref-tip" data-for="../../reference-trixi/#SummationByPartsOperators.semidiscretize-Tuple{Trixi.AbstractSemidiscretization, Any}"><code class="ref-tip-sig nohighlight"><span class="julia-funcall">semidiscretize</span>(semi<span class="julia-operator">::</span><span class="julia-type">AbstractSemidiscretization</span>, tspan;
                jac_prototype<span class="julia-operator">::</span><span class="julia-type">Union</span>{<span class="julia-type">AbstractMatrix</span>, <span class="julia-type">Nothing</span>} <span class="julia-keyword">=</span> <span class="julia-symbol">nothing</span>,
