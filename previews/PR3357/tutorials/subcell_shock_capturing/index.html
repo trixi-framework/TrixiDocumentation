@@ -177,11 +177,11 @@
 ────────────────────────────────────────────────────────────────────────────────────────────────────
  Simulation running &#39;CompressibleEulerEquations2D&#39; with DGSEM(polydeg=3)
 ────────────────────────────────────────────────────────────────────────────────────────────────────
- #timesteps:                  0                run time:       9.11000000e-07 s
+ #timesteps:                  0                run time:       1.02200000e-06 s
  Δt:             1.00000000e+00                └── GC time:    0.00000000e+00 s (0.000%)
  sim. time:      0.00000000e+00 (0.000%)       time/DOF/RHS:          NaN s
                                                PID:                   Inf s
- #DOFs per field:         16384                alloc&#39;d memory:       2217.215 MiB
+ #DOFs per field:         16384                alloc&#39;d memory:       2294.710 MiB
  #elements:                1024                device memory:           0.000 MiB
 
  Variable:       rho              rho_v1           rho_v2           rho_e_total
@@ -190,20 +190,20 @@
  ∑∂S/∂U ⋅ Uₜ :  -6.22526192e+02
 ────────────────────────────────────────────────────────────────────────────────────────────────────
 
-#timesteps:    100 │ Δt: 2.8994e-03 │ sim. time: 2.9348e-01 (14.674%)  │ run time: 1.6046e+00 s
-#timesteps:    200 │ Δt: 3.2422e-03 │ sim. time: 6.0015e-01 (30.008%)  │ run time: 2.5193e+00 s
-#timesteps:    300 │ Δt: 3.8214e-03 │ sim. time: 9.5440e-01 (47.720%)  │ run time: 3.4627e+00 s
-#timesteps:    400 │ Δt: 4.3987e-03 │ sim. time: 1.3655e+00 (68.276%)  │ run time: 4.4392e+00 s
-#timesteps:    500 │ Δt: 5.0255e-03 │ sim. time: 1.8368e+00 (91.842%)  │ run time: 5.4325e+00 s
+#timesteps:    100 │ Δt: 2.8994e-03 │ sim. time: 2.9348e-01 (14.674%)  │ run time: 1.7873e+00 s
+#timesteps:    200 │ Δt: 3.2422e-03 │ sim. time: 6.0015e-01 (30.008%)  │ run time: 2.8076e+00 s
+#timesteps:    300 │ Δt: 3.8214e-03 │ sim. time: 9.5440e-01 (47.720%)  │ run time: 3.8542e+00 s
+#timesteps:    400 │ Δt: 4.3987e-03 │ sim. time: 1.3655e+00 (68.276%)  │ run time: 4.9303e+00 s
+#timesteps:    500 │ Δt: 5.0255e-03 │ sim. time: 1.8368e+00 (91.842%)  │ run time: 6.0244e+00 s
 
 ────────────────────────────────────────────────────────────────────────────────────────────────────
  Simulation running &#39;CompressibleEulerEquations2D&#39; with DGSEM(polydeg=3)
 ────────────────────────────────────────────────────────────────────────────────────────────────────
- #timesteps:                533                run time:       5.83683876e+00 s
+ #timesteps:                533                run time:       6.46568343e+00 s
  Δt:             2.09505391e-04                └── GC time:    0.00000000e+00 s (0.000%)
- sim. time:      2.00000000e+00 (100.000%)     time/DOF/RHS:   1.47088714e-07 s
-                                               PID:            2.20075967e-07 s
- #DOFs per field:         16384                alloc&#39;d memory:       2234.488 MiB
+ sim. time:      2.00000000e+00 (100.000%)     time/DOF/RHS:   1.63453195e-07 s
+                                               PID:            2.43865390e-07 s
+ #DOFs per field:         16384                alloc&#39;d memory:       2312.120 MiB
  #elements:                1024                device memory:           0.000 MiB
 
  Variable:       rho              rho_v1           rho_v2           rho_e_total
@@ -220,50 +220,50 @@ Trixi.jl simulation finished.  Final time: 2.0  Time steps: 533 (accepted), 533 
 ────────────────────────────────────────────────────────────────────────────────────────────
 <span class="sgr1">                                                  Time                   Allocations        </span>
                                          ──────────────────────    ────────────────────────
-           Tot / % measured:                 5.85s / 100.0%            24.7MiB / 100.0%
+           Tot / % measured:                 6.47s / 100.0%            24.9MiB / 100.0%
  ──────────────────────────────────────  ──────────────────────    ────────────────────────
  Section                         ncalls    time    %tot     avg      alloc    %tot      avg
 ────────────────────────────────────────────────────────────────────────────────────────────
- main loop                            1   5.06s   86.6%   5.06s    8.68MiB   35.1%  8.68MiB
- ├─ rhs_hyperbolic!               1.60k   3.85s   65.9%  2.41ms    4.05KiB    0.0%    2.59B
- │  ├─ volume integral            1.60k   3.55s   60.7%  2.22ms          ∅       ∅        ∅
- │  ├─ interface flux             1.60k   181ms    3.1%   113μs          ∅       ∅        ∅
- │  ├─ prolong2interfaces         1.60k  47.0ms    0.8%  29.4μs          ∅       ∅        ∅
- │  ├─ surface integral           1.60k  44.2ms    0.8%  27.6μs          ∅       ∅        ∅
- │  ├─ reset ∂u/∂t                1.60k  14.3ms    0.2%  8.95μs          ∅       ∅        ∅
- │  ├─ Jacobian                   1.60k  10.9ms    0.2%  6.80μs          ∅       ∅        ∅
- │  ├─ ~rhs_hyperbolic!~          1.60k  4.20ms    0.1%  2.63μs    4.05KiB    0.0%    2.59B
- │  ├─ prolong2boundaries         1.60k   243μs    0.0%   152ns          ∅       ∅        ∅
- │  ├─ prolong2mortars            1.60k   241μs    0.0%   151ns          ∅       ∅        ∅
- │  ├─ mortar flux                1.60k   199μs    0.0%   124ns          ∅       ∅        ∅
- │  ├─ boundary flux              1.60k  51.0μs    0.0%  31.9ns          ∅       ∅        ∅
- │  └─ source terms               1.60k  49.9μs    0.0%  31.2ns          ∅       ∅        ∅
- ├─ a posteriori limiter          1.60k   1.08s   18.4%   674μs     213KiB    0.8%     136B
- │  ├─ blending factors           1.60k   615ms   10.5%   385μs     213KiB    0.8%     136B
- │  │  ├─ local twosided          1.60k   609ms   10.4%   381μs     212KiB    0.8%     136B
- │  │  ├─ reset alpha             1.60k  5.63ms    0.1%  3.52μs          ∅       ∅        ∅
- │  │  └─ ~blending factors~      1.60k   857μs    0.0%   536ns       432B    0.0%    0.27B
- │  └─ ~a posteriori limiter~     1.60k   462ms    7.9%   289μs       256B    0.0%    0.16B
- ├─ Step-Callbacks                  533  71.1ms    1.2%   133μs    8.46MiB   34.2%  16.3KiB
- │  ├─ calculate dt                 533  62.0ms    1.1%   116μs    8.33KiB    0.0%    16.0B
- │  ├─ analyze solution               1  6.25ms    0.1%  6.25ms    4.64MiB   18.8%  4.64MiB
- │  ├─ I/O                            1  1.81ms    0.0%  1.81ms    1.51MiB    6.1%  1.51MiB
- │  │  ├─ save solution               1  1.80ms    0.0%  1.80ms    1.51MiB    6.1%  1.51MiB
- │  │  ├─ get node variables          1  4.96μs    0.0%  4.96μs      48.0B    0.0%    48.0B
- │  │  ├─ ~I/O~                       1  4.92μs    0.0%  4.92μs    1.31KiB    0.0%  1.31KiB
- │  │  ├─ get element variables       1   340ns    0.0%   340ns          ∅       ∅        ∅
- │  │  └─ save mesh                   1  80.0ns    0.0%  80.0ns          ∅       ∅        ∅
- │  └─ ~Step-Callbacks~             533  1.09ms    0.0%  2.04μs    2.30MiB    9.3%  4.42KiB
- └─ ~main loop~                       1  62.6ms    1.1%  62.6ms       608B    0.0%     608B
- I/O                                  2   710ms   12.1%   355ms    10.6MiB   43.0%  5.32MiB
- ├─ ~I/O~                             2   654ms   11.2%   327ms    7.14MiB   28.9%  3.57MiB
- ├─ save solution                     1  55.7ms    1.0%  55.7ms    3.50MiB   14.2%  3.50MiB
- ├─ get node variables                1  6.84μs    0.0%  6.84μs      48.0B    0.0%    48.0B
- ├─ get element variables             1  1.79μs    0.0%  1.79μs          ∅       ∅        ∅
- └─ save mesh                         1  60.0ns    0.0%  60.0ns          ∅       ∅        ∅
- analyze solution                     1  71.3ms    1.2%  71.3ms    5.42MiB   21.9%  5.42MiB
- calculate dt                         1   115μs    0.0%   115μs      16.0B    0.0%    16.0B
-────────────────────────────────────────────────────────────────────────────────────────────</code></pre><h2 id="Visualization"><a class="docs-heading-anchor" href="#Visualization">Visualization</a><a id="Visualization-1"></a><a class="docs-heading-anchor-permalink" href="#Visualization" title="Permalink"></a></h2><p>As for a standard simulation in Trixi.jl, it is possible to visualize the solution using the <code>plot</code> routine from Plots.jl.</p><pre id="c-90d24c06"><code class="nohighlight hljs line-numbers"><span class="code-lines"><span class="line"><span class="line-num" aria-hidden="true"></span><span class="julia-keyword">using</span> Plots</span><span class="line"><span class="line-num" aria-hidden="true"></span><span class="julia-funcall">plot</span>(sol)</span></span></code></pre><img src="b4a8ed5d.svg" alt="Example block output"/><p>To get an additional look at the amount of limiting that is used, you can use the visualization approach using the <a href="../../reference-trixi/#Trixi.SaveSolutionCallback"><code>SaveSolutionCallback</code></a> by passing <code>(:limiting_coefficient,)</code> as <code>extra_node_variables</code>, <a href="https://github.com/trixi-framework/Trixi2Vtk.jl"><code>Trixi2Vtk</code></a> and <a href="https://www.paraview.org/download/">ParaView</a>. More details about this procedure can be found in the <a href="../../visualization/#visualization">visualization documentation</a>.</p><p>With that implementation and the standard procedure used for Trixi2Vtk you get the following dropdown menu in ParaView.</p><p><img src="https://github.com/trixi-framework/Trixi.jl/assets/74359358/70d15f6a-059b-4349-8291-68d9ab3af43e" alt="ParaView_Dropdownmenu"/></p><p>The resulting visualization of the density and the limiting parameter then looks like this. <img src="https://github.com/trixi-framework/Trixi.jl/assets/74359358/e5808bed-c8ab-43bf-af7a-050fe43dd630" alt="blast_wave_paraview"/></p><p>You can see that the limiting coefficient does not lie in the interval [0,1] because Trixi2Vtk interpolates all quantities to regular nodes by default. You can disable this functionality with <code>reinterpolate=false</code> within the call of <code>trixi2vtk(...)</code> and get the following visualization. <img src="https://github.com/trixi-framework/Trixi.jl/assets/74359358/39274f18-0064-469c-b4da-bac4b843e116" alt="blast_wave_paraview_reinterpolate=false"/></p><h2 id="subcell_bounds_check"><a class="docs-heading-anchor" href="#subcell_bounds_check">Bounds checking</a><a id="subcell_bounds_check-1"></a><a class="docs-heading-anchor-permalink" href="#subcell_bounds_check" title="Permalink"></a></h2><p>Subcell limiting is based on the fulfillment of target bounds - either global or local. Although the implementation works and has been thoroughly tested, there are some cases where these bounds are not met. For instance, the deviations could be in machine precision, which is not problematic. Larger deviations can be cause by too large time-step sizes (which can be easily fixed by reducing the CFL number), specific boundary conditions or source terms. Insufficient parameters for the Newton-bisection algorithm can also be a reason when limiting non-linear variables. There are described <a href="#global_bounds">above</a>.</p><p>In many cases, it is reasonable to monitor the bounds deviations. Because of that, Trixi.jl supports a bounds checking routine implemented using the stage callback <a href="../../reference-trixi/#Trixi.BoundsCheckCallback"><code>BoundsCheckCallback</code></a>. It checks all target bounds for fulfillment in every RK stage. If added to the tuple of stage callbacks like</p><pre id="c-de3a37d7"><code class="nohighlight hljs line-numbers"><span class="code-lines"><span class="line"><span class="line-num" aria-hidden="true"></span>stage_callbacks <span class="julia-keyword">=</span> (<a class="julia-ref" href="../../reference-trixi/#Trixi.SubcellLimiterIDPCorrection"><span class="julia-funcall">SubcellLimiterIDPCorrection</span></a>(), <a class="julia-ref" href="../../reference-trixi/#Trixi.BoundsCheckCallback"><span class="julia-funcall">BoundsCheckCallback</span></a>())</span></span></code></pre><p>and passed to the time integration method, a summary is added to the final console output. For the given example, this summary shows that all bounds are met at all times.</p><pre><code class="nohighlight hljs">────────────────────────────────────────────────────────────────────────────────────────────────────
+ main loop                            1   5.62s   86.7%   5.62s    8.82MiB   35.5%  8.82MiB
+ ├─ rhs_hyperbolic!               1.60k   4.28s   66.1%  2.68ms     154KiB    0.6%    98.6B
+ │  ├─ volume integral            1.60k   3.94s   60.9%  2.47ms     150KiB    0.6%    96.0B
+ │  ├─ interface flux             1.60k   186ms    2.9%   116μs          ∅       ∅        ∅
+ │  ├─ surface integral           1.60k  56.4ms    0.9%  35.3μs          ∅       ∅        ∅
+ │  ├─ prolong2interfaces         1.60k  52.2ms    0.8%  32.7μs          ∅       ∅        ∅
+ │  ├─ reset ∂u/∂t                1.60k  20.1ms    0.3%  12.6μs          ∅       ∅        ∅
+ │  ├─ Jacobian                   1.60k  19.2ms    0.3%  12.0μs          ∅       ∅        ∅
+ │  ├─ ~rhs_hyperbolic!~          1.60k  3.92ms    0.1%  2.45μs    4.05KiB    0.0%    2.59B
+ │  ├─ prolong2mortars            1.60k   382μs    0.0%   239ns          ∅       ∅        ∅
+ │  ├─ prolong2boundaries         1.60k   354μs    0.0%   222ns          ∅       ∅        ∅
+ │  ├─ mortar flux                1.60k   164μs    0.0%   102ns          ∅       ∅        ∅
+ │  ├─ boundary flux              1.60k  54.5μs    0.0%  34.1ns          ∅       ∅        ∅
+ │  └─ source terms               1.60k  46.2μs    0.0%  28.9ns          ∅       ∅        ∅
+ ├─ a posteriori limiter          1.60k   1.19s   18.4%   744μs     213KiB    0.8%     136B
+ │  ├─ blending factors           1.60k   638ms    9.8%   399μs     213KiB    0.8%     136B
+ │  │  ├─ local twosided          1.60k   630ms    9.7%   394μs     212KiB    0.8%     136B
+ │  │  ├─ reset alpha             1.60k  6.82ms    0.1%  4.26μs          ∅       ∅        ∅
+ │  │  └─ ~blending factors~      1.60k   746μs    0.0%   466ns       432B    0.0%    0.27B
+ │  └─ ~a posteriori limiter~     1.60k   553ms    8.5%   346μs       256B    0.0%    0.16B
+ ├─ ~main loop~                       1  78.8ms    1.2%  78.8ms       608B    0.0%     608B
+ └─ Step-Callbacks                  533  65.4ms    1.0%   123μs    8.46MiB   34.0%  16.3KiB
+    ├─ calculate dt                 533  55.9ms    0.9%   105μs    8.33KiB    0.0%    16.0B
+    ├─ analyze solution               1  6.38ms    0.1%  6.38ms    4.64MiB   18.7%  4.64MiB
+    ├─ I/O                            1  1.99ms    0.0%  1.99ms    1.51MiB    6.1%  1.51MiB
+    │  ├─ save solution               1  1.98ms    0.0%  1.98ms    1.51MiB    6.1%  1.51MiB
+    │  ├─ ~I/O~                       1  5.44μs    0.0%  5.44μs    1.31KiB    0.0%  1.31KiB
+    │  ├─ get node variables          1  5.00μs    0.0%  5.00μs      48.0B    0.0%    48.0B
+    │  ├─ get element variables       1   641ns    0.0%   641ns          ∅       ∅        ∅
+    │  └─ save mesh                   1   160ns    0.0%   160ns          ∅       ∅        ∅
+    └─ ~Step-Callbacks~             533  1.12ms    0.0%  2.10μs    2.30MiB    9.3%  4.42KiB
+ I/O                                  2   781ms   12.1%   390ms    10.6MiB   42.6%  5.29MiB
+ ├─ ~I/O~                             2   717ms   11.1%   359ms    7.15MiB   28.8%  3.58MiB
+ ├─ save solution                     1  63.6ms    1.0%  63.6ms    3.43MiB   13.8%  3.43MiB
+ ├─ get node variables                1  5.84μs    0.0%  5.84μs      48.0B    0.0%    48.0B
+ ├─ get element variables             1  1.69μs    0.0%  1.69μs          ∅       ∅        ∅
+ └─ save mesh                         1   451ns    0.0%   451ns          ∅       ∅        ∅
+ analyze solution                     1  76.9ms    1.2%  76.9ms    5.46MiB   22.0%  5.46MiB
+ calculate dt                         1   104μs    0.0%   104μs      16.0B    0.0%    16.0B
+────────────────────────────────────────────────────────────────────────────────────────────</code></pre><h2 id="Visualization"><a class="docs-heading-anchor" href="#Visualization">Visualization</a><a id="Visualization-1"></a><a class="docs-heading-anchor-permalink" href="#Visualization" title="Permalink"></a></h2><p>As for a standard simulation in Trixi.jl, it is possible to visualize the solution using the <code>plot</code> routine from Plots.jl.</p><pre id="c-90d24c06"><code class="nohighlight hljs line-numbers"><span class="code-lines"><span class="line"><span class="line-num" aria-hidden="true"></span><span class="julia-keyword">using</span> Plots</span><span class="line"><span class="line-num" aria-hidden="true"></span><span class="julia-funcall">plot</span>(sol)</span></span></code></pre><img src="9466f5e5.svg" alt="Example block output"/><p>To get an additional look at the amount of limiting that is used, you can use the visualization approach using the <a href="../../reference-trixi/#Trixi.SaveSolutionCallback"><code>SaveSolutionCallback</code></a> by passing <code>(:limiting_coefficient,)</code> as <code>extra_node_variables</code>, <a href="https://github.com/trixi-framework/Trixi2Vtk.jl"><code>Trixi2Vtk</code></a> and <a href="https://www.paraview.org/download/">ParaView</a>. More details about this procedure can be found in the <a href="../../visualization/#visualization">visualization documentation</a>.</p><p>With that implementation and the standard procedure used for Trixi2Vtk you get the following dropdown menu in ParaView.</p><p><img src="https://github.com/trixi-framework/Trixi.jl/assets/74359358/70d15f6a-059b-4349-8291-68d9ab3af43e" alt="ParaView_Dropdownmenu"/></p><p>The resulting visualization of the density and the limiting parameter then looks like this. <img src="https://github.com/trixi-framework/Trixi.jl/assets/74359358/e5808bed-c8ab-43bf-af7a-050fe43dd630" alt="blast_wave_paraview"/></p><p>You can see that the limiting coefficient does not lie in the interval [0,1] because Trixi2Vtk interpolates all quantities to regular nodes by default. You can disable this functionality with <code>reinterpolate=false</code> within the call of <code>trixi2vtk(...)</code> and get the following visualization. <img src="https://github.com/trixi-framework/Trixi.jl/assets/74359358/39274f18-0064-469c-b4da-bac4b843e116" alt="blast_wave_paraview_reinterpolate=false"/></p><h2 id="subcell_bounds_check"><a class="docs-heading-anchor" href="#subcell_bounds_check">Bounds checking</a><a id="subcell_bounds_check-1"></a><a class="docs-heading-anchor-permalink" href="#subcell_bounds_check" title="Permalink"></a></h2><p>Subcell limiting is based on the fulfillment of target bounds - either global or local. Although the implementation works and has been thoroughly tested, there are some cases where these bounds are not met. For instance, the deviations could be in machine precision, which is not problematic. Larger deviations can be cause by too large time-step sizes (which can be easily fixed by reducing the CFL number), specific boundary conditions or source terms. Insufficient parameters for the Newton-bisection algorithm can also be a reason when limiting non-linear variables. There are described <a href="#global_bounds">above</a>.</p><p>In many cases, it is reasonable to monitor the bounds deviations. Because of that, Trixi.jl supports a bounds checking routine implemented using the stage callback <a href="../../reference-trixi/#Trixi.BoundsCheckCallback"><code>BoundsCheckCallback</code></a>. It checks all target bounds for fulfillment in every RK stage. If added to the tuple of stage callbacks like</p><pre id="c-de3a37d7"><code class="nohighlight hljs line-numbers"><span class="code-lines"><span class="line"><span class="line-num" aria-hidden="true"></span>stage_callbacks <span class="julia-keyword">=</span> (<a class="julia-ref" href="../../reference-trixi/#Trixi.SubcellLimiterIDPCorrection"><span class="julia-funcall">SubcellLimiterIDPCorrection</span></a>(), <a class="julia-ref" href="../../reference-trixi/#Trixi.BoundsCheckCallback"><span class="julia-funcall">BoundsCheckCallback</span></a>())</span></span></code></pre><p>and passed to the time integration method, a summary is added to the final console output. For the given example, this summary shows that all bounds are met at all times.</p><pre><code class="nohighlight hljs">────────────────────────────────────────────────────────────────────────────────────────────────────
 Maximum deviation from bounds:
 ────────────────────────────────────────────────────────────────────────────────────────────────────
 rho:
@@ -275,7 +275,7 @@ rho:
 300, 0.9520853560765293, 0.0, 0.0
 400, 1.3630295622683186, 0.0, 0.0
 500, 1.8344999624013498, 0.0, 0.0
-532, 1.9974179806990118, 0.0, 0.0</code></pre><hr/><p><em>This page was generated using <a href="https://github.com/fredrikekre/Literate.jl">Literate.jl</a>.</em></p></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="../shock_capturing/">« 5 Shock capturing with flux differencing and stage limiter</a><a class="docs-footer-nextpage" href="../non_periodic_boundaries/">7 Non-periodic boundaries »</a><div class="flexbox-break"></div><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="auto">Automatic (OS)</option><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option><option value="catppuccin-latte">catppuccin-latte</option><option value="catppuccin-frappe">catppuccin-frappe</option><option value="catppuccin-macchiato">catppuccin-macchiato</option><option value="catppuccin-mocha">catppuccin-mocha</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> version 1.19.0 on <span class="colophon-date" title="Tuesday 13 October 2026 18:12">Tuesday 13 October 2026</span>. Using Julia version 1.10.12.</p></section><footer class="modal-card-foot"></footer></div></div></div><div class="ref-tips" hidden><div class="ref-tip" data-for="../../reference-trixi/#SummationByPartsOperators.semidiscretize-Tuple{SemidiscretizationHyperbolicParabolic, Any}"><code class="ref-tip-sig nohighlight"><span class="julia-funcall">semidiscretize</span>(semi<span class="julia-operator">::</span><span class="julia-type">SemidiscretizationHyperbolicParabolic</span>, tspan;
+532, 1.9974179806990118, 0.0, 0.0</code></pre><hr/><p><em>This page was generated using <a href="https://github.com/fredrikekre/Literate.jl">Literate.jl</a>.</em></p></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="../shock_capturing/">« 5 Shock capturing with flux differencing and stage limiter</a><a class="docs-footer-nextpage" href="../non_periodic_boundaries/">7 Non-periodic boundaries »</a><div class="flexbox-break"></div><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="auto">Automatic (OS)</option><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option><option value="catppuccin-latte">catppuccin-latte</option><option value="catppuccin-frappe">catppuccin-frappe</option><option value="catppuccin-macchiato">catppuccin-macchiato</option><option value="catppuccin-mocha">catppuccin-mocha</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> version 1.19.0 on <span class="colophon-date" title="Tuesday 13 October 2026 23:48">Tuesday 13 October 2026</span>. Using Julia version 1.10.12.</p></section><footer class="modal-card-foot"></footer></div></div></div><div class="ref-tips" hidden><div class="ref-tip" data-for="../../reference-trixi/#SummationByPartsOperators.semidiscretize-Tuple{SemidiscretizationHyperbolicParabolic, Any}"><code class="ref-tip-sig nohighlight"><span class="julia-funcall">semidiscretize</span>(semi<span class="julia-operator">::</span><span class="julia-type">SemidiscretizationHyperbolicParabolic</span>, tspan;
                jac_prototype_parabolic<span class="julia-operator">::</span><span class="julia-type">Union</span>{<span class="julia-type">AbstractMatrix</span>, <span class="julia-type">Nothing</span>} <span class="julia-keyword">=</span> <span class="julia-symbol">nothing</span>,
                colorvec_parabolic<span class="julia-operator">::</span><span class="julia-type">Union</span>{<span class="julia-type">AbstractVector</span>, <span class="julia-type">Nothing</span>} <span class="julia-keyword">=</span> <span class="julia-symbol">nothing</span>)</code><p class="ref-tip-brief">Wrap the semidiscretization semi as a split ODE problem in the time interval tspan that can be passed to solve from the SciML ecosystem.</p></div><div class="ref-tip" data-for="../../reference-trixi/#SummationByPartsOperators.semidiscretize-Tuple{SemidiscretizationHyperbolicSplit, Any}"><code class="ref-tip-sig nohighlight"><span class="julia-funcall">semidiscretize</span>(semi<span class="julia-operator">::</span><span class="julia-type">SemidiscretizationHyperbolicSplit</span>, tspan)</code><p class="ref-tip-brief">Wrap the semidiscretization semi as a split ODE problem in the time interval tspan that can be passed to solve from the SciML ecosystem.</p></div><div class="ref-tip" data-for="../../reference-trixi/#SummationByPartsOperators.semidiscretize-Tuple{Trixi.AbstractSemidiscretization, Any}"><code class="ref-tip-sig nohighlight"><span class="julia-funcall">semidiscretize</span>(semi<span class="julia-operator">::</span><span class="julia-type">AbstractSemidiscretization</span>, tspan;
                jac_prototype<span class="julia-operator">::</span><span class="julia-type">Union</span>{<span class="julia-type">AbstractMatrix</span>, <span class="julia-type">Nothing</span>} <span class="julia-keyword">=</span> <span class="julia-symbol">nothing</span>,
